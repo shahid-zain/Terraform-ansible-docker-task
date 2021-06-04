@@ -1,0 +1,9 @@
+- name: Install Docker
+  remote_user: ubuntu
+  hosts: localhost
+  become: true
+  become_user: root
+  gather_facts: true
+  tasks:
+          - name: Download docker and install
+            command: apt install docker.io -y
